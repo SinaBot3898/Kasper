@@ -15,7 +15,7 @@ local _M =
 	-- Getting updates
 	telegram =
 	{
-		token = assert(read_secret('telegram/token') or os.getenv('693969432:AAFC9B1w0KQrHHA30D30UHxkYSbKpdjThW8'),
+		token = assert(read_secret('telegram/token') or os.getenv("693969432:AAFC9B1w0KQrHHA30D30UHxkYSbKpdjThW8"),
 			'You must export $TG_TOKEN with your Telegram Bot API token'):gsub("%s+", ""),
 		allowed_updates = os.getenv('TG_UPDATES') or {'message', 'edited_message', 'callback_query'},
 		polling =
